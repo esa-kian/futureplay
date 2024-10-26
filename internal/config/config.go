@@ -14,6 +14,7 @@ type Config struct {
 	Matchmaking struct {
 		CompetitionSize int `yaml:"competition_size"`
 		WaitTimeSeconds int `yaml:"wait_time_seconds"`
+		LevelRange      int `yaml:"level_range"`
 	} `yaml:"matchmaking"`
 }
 
