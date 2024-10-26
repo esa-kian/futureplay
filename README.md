@@ -98,8 +98,11 @@ futureplay/
 │   ├── api/
 │   │   └── handler.go # HTTP request handlers
 │   │
+│   ├── config/
+│   │   └── config.go   # configuration loader 
+│   │
 │   ├── model/
-│   │   └── model.go   # Player model definition
+│   │   └── model.go   # Models definition
 │   │
 │   ├── service/
 │   │   └── matchmaking.go # Matchmaking logic
@@ -107,6 +110,7 @@ futureplay/
 │   └── storage/
 │       └── memory.go   # In-memory storage implementation
 │
+├── config.yaml          # configurations
 ├── Dockerfile           # Dockerfile for containerization
 ├── go.mod               # Go module file
 └── README.md            # Project documentation
