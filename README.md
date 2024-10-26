@@ -10,6 +10,7 @@
 6. [API Endpoints](#api-endpoints)
 7. [Directory Structure](#directory-structure)
 8. [License](#license)
+8. [Note](#note)
 
 ## Description
 
@@ -115,3 +116,5 @@ futureplay/
 This project is open-source and available under the MIT License.
 
 
+## Note:
+The unit tests and README documentation were generated with the assistance of ChatGPT to ensure comprehensive coverage and clear explanations.
