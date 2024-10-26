@@ -2,15 +2,16 @@
 
 ## Table of Contents
 
-1. [Description](#description)
-2. [Features](#features)
-3. [Prerequisites](#prerequisites)
-4. [Installation](#installation)
-5. [Running the Application](#running-the-application)
-6. [API Endpoints](#api-endpoints)
-7. [Directory Structure](#directory-structure)
-8. [License](#license)
-8. [Note](#note)
+- [Description](#description)
+- [Features](#features)
+- [Prerequisites](#prerequisites)
+- [Configuration](#configuration)
+- [Installation](#installation)
+- [Running the Application](#running-the-application)
+- [API Endpoints](#api-endpoints)
+- [Directory Structure](#directory-structure)
+- [License](#license)
+- [Note](#note)
 
 ## Description
 
@@ -27,6 +28,21 @@ The Matchmaking Service is a Golang-based API designed for grouping players into
 
 - [Go 1.20+](https://golang.org/dl/)
 - [Docker](https://www.docker.com/get-started)
+
+## Configuration
+
+The application settings, including server port, competition size, and wait time, can be customized in the `config.yaml` file:
+
+```yaml
+server:
+  port: 8080
+
+matchmaking:
+  competition_size: 10
+  wait_time_seconds: 30
+```
+Adjust these values as needed before starting the application.
+
 
 ## Installation
 
