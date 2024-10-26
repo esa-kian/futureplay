@@ -7,12 +7,13 @@ import (
 	"futureplay/internal/storage"
 	"log"
 	"net/http"
+	"strconv"
 
 	"github.com/gorilla/mux"
 )
 
 func main() {
-	cfg, err := config.LoadConfig("./config.yaml")
+	cfg, err := config.LoadConfig("config.yaml")
 	if err != nil {
 		log.Fatalf("Could not load configuration: %v", err)
 	}
@@ -25,8 +26,9 @@ func main() {
 	r := mux.NewRouter()
 	r.HandleFunc("/matchmaking/join", handler.JoinMatchmaking).Methods("POST")
 
-	log.Println("Starting server on :8080...")
-	if err := http.ListenAndServe(":8080", r); err != nil {
+	port := ":" + strconv.Itoa(cfg.Server.Port)
+	log.Printf("Starting server on http://localhost%s...", port)
+	if err := http.ListenAndServe(port, r); err != nil {
 		log.Fatalf("Server failed: %s\n", err)
 	}
 }
