@@ -18,7 +18,7 @@ func setup() (*storage.InMemoryStore, *Matchmaker, *config.Config) {
 	}
 
 	store := storage.NewInMemoryStore()
-	matchmaker := NewMatchmaker(store, cfg.Matchmaking.CompetitionSize, cfg.Matchmaking.WaitTimeSeconds)
+	matchmaker := NewMatchmaker(store, cfg.Matchmaking.CompetitionSize, cfg.Matchmaking.WaitTimeSeconds, cfg.Matchmaking.LevelRange)
 	return store, matchmaker, cfg
 }
 

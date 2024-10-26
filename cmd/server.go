@@ -19,7 +19,7 @@ func main() {
 	}
 
 	store := storage.NewInMemoryStore()
-	matchmaker := service.NewMatchmaker(store, cfg.Matchmaking.CompetitionSize, cfg.Matchmaking.WaitTimeSeconds)
+	matchmaker := service.NewMatchmaker(store, cfg.Matchmaking.CompetitionSize, cfg.Matchmaking.WaitTimeSeconds, cfg.Matchmaking.LevelRange)
 
 	handler := api.NewHandler(matchmaker)
 
