@@ -1,0 +1,6 @@
+server:
+  port: 8080
+
+matchmaking:
+  competition_size: 10
+  wait_time_seconds: 30
