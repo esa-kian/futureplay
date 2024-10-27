@@ -9,6 +9,7 @@
 - [Installation](#installation)
 - [Running the Application](#running-the-application)
 - [API Endpoints](#api-endpoints)
+- [Testing](#testing)
 - [Directory Structure](#directory-structure)
 - [License](#license)
 - [Note](#note)
@@ -102,6 +103,14 @@ The application will be accessible at `http://localhost:8080`.
 Using `curl` to join matchmaking:
 ```bash
 curl -X POST http://localhost:8080/matchmaking/join -H "Content-Type: application/json" -d '{"id": "1", "level": 5, "country": "US"}'
+```
+
+## Testing
+To run unit tests, execute:
+```bash
+go test ./internal/storage -v # for testing storage implementation
+go test ./internal/api -v # for testing HTTP request handlers
+go test ./internal/service -v # for testing logic layer
 ```
 ## Directory Structure
 ```plaintext
